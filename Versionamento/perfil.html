@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .campo{
+            width: 25%;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        img.avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-info {
+            margin-bottom: 20px;
+        }
+
+        .profile-info p {
+            margin: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do GitHub</title>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Perfil do GitHub</h1>
+        <form onsubmit="return getProfile()">
+            <input class="campo" type="text" id="usernameInput" placeholder="Digite o nome de usuário do GitHub" required>
+            <button type="submit">Buscar</button>
+            <!-- <p> Nome do perfil: ${name} </p> 
+                <p> Nome de uruário: ${login} </p>
+                <p> Número de seguidores: ${followers} </p>
+                <p> Número de pessoas que está seguindo: ${following} </p>
+                <p><a href= ${repos_url}><Link dos Repositórios></a></p> -->
+        </form>
+        <div id="resp"> </div>
+        <div id="profileInfo" class="profile-info"></div>
+    </div>
+
+    <script>
+        function getProfile() {
+            event.preventDefault();//previne a ação padrão do navegador  
+            const username = document.getElementById('usernameInput').value;
+            const resp = document.getElementById('resp');
+            var url = `https://api.github.com/users/${username}`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                const avatar_url = data.avatar_url;
+                const name = data.name;
+                const login = data.login;
+                const followers = data.followers;
+                const following = data.following;
+                const repos_url = data.repos_url;
+
+                // console.log(`Avatar: ${avatar_url}`);
+                // console.log(`Nome do perfil: ${name}`);
+                // console.log(`Nome de usuário: ${login}`);
+                // console.log(`Número de seguidores: ${followers}`);
+                // console.log(`Número de pessoas que está seguindo: ${following}`);
+                // console.log(`Link para os repositório: ${repos_url}`);
+
+                resp.innerHTML = `
+                <p> Nome do perfil: ${name} </p>
+                <p> Nome de usuário: ${login} </p>
+                <p> Número de seguidores: ${followers} </p>
+                <p> Número de pessoas que está seguindo: ${following} </p>
+                <p><a href=${repos_url}>Link dos Repositórios</a></p>`;
+            });
+        }
+    </script>
+</body>
+
+</html>
+<!DOCTYPE html>

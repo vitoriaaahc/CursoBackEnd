@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de automoveis</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>Automóveis</h1>
+        <input type="text" id="placa" placeholder="Digite a placa"><br>
+        <button onclick="buscaAutomovel()" style="width: 178px;">Buscar autómovel</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var placa, marca, modelo, ano
+    function defineCampos() {
+        placa = document.getElementById("placa");
+        if (placa.value == null || placa.value == ' ') {
+            alert("Placa Inválida!")
+        } else if (placa.value.lenght == 7) {
+            return true;
+        } return false;
+    }
+    function buscaAutomovel() {
+        defineCampos()
+        var url = `./db.json`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                for (let automovel of data.automovel) {
+                    if (placa.value == automovel.placa) {
+                        alert(`Marca ${automovel.marca}\nModelo: ${automovel.modelo}\nAno: ${automovel.ano}`)
+                    }
+                }
+            })
+    }
+</script>

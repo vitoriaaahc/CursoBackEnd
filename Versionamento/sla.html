@@ -1,0 +1,46 @@
+function defineCampos(){
+    nome = document.getElementById("placa")
+    const regexPlaca = /^[a-zA-Z]{3}[0-9]{4}$/;
+    if(placa.value.length == 7 && regexPlaca.test(placa)){
+        return true
+    } 
+    return false
+}
+if(defineCampos()){
+    var url = "./Automoveis.json"
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        modelo.value = data[0].modelo
+        ano.value = data[0].ano
+        marca.value = data[0].marca
+})
+alert(`Marca: ${marca}\nModelo: ${modelo}\nAno: ${ano}`)
+}
+else{
+alert("Placa inválida")
+}
+
+function buscaAutomovel(){
+    const url = "./Automoveis.json";
+    const ponte = new XMLHttpRequest();
+    ponte.open("GET", url, true);
+    ponte.onload = function() {
+      if (ponte.status === 200) {
+        const automoveis = JSON.parse(ponte.responseText).automoveis;
+        const automovelEncontrado = automoveis.find(function(automovel) {
+          return automovel.placa === placaBuscada;
+        });
+        if (automovelEncontrado) {
+          const resultado = document.getElementById("resultado");
+          resultado.innerHTML = `Placa: ${automovelEncontrado.placa}<br>
+                                  Marca: ${automovelEncontrado.marca}<br>
+                                  Modelo: ${automovelEncontrado.modelo}<br>
+                                  Ano: ${automovelEncontrado.ano}`;
+        }
+        
+    } else{
+            alert("Placa incorreta")
+        }
+}
+}

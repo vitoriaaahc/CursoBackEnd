@@ -1,0 +1,12 @@
+{
+    "cep":{
+        "code":"88136-272",
+        "state":"SC",
+        "city":"Palhoça",
+        "district":"São Sebastião",
+        "address":"Rua José Constâncio dos Santos",
+        "status":200,
+        "ok":true,
+        "statusText":"ok"
+    }
+}

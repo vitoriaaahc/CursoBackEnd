@@ -1,0 +1,12 @@
+{
+    "cep": {
+        "code": "88113-800",
+        "state": "SC",
+        "city": "São José",
+        "district": "Areias",
+        "address": "Rua Fagundes Varela",
+        "status": 200,
+        "ok": true,
+        "statusText": "ok"
+    }
+}

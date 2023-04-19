@@ -1,0 +1,94 @@
+{
+    "automovel": [
+        {
+            "placa": "BRA2E19",
+            "modelo": "Peugeot 208",
+            "ano": "2012",
+            "marca": "Peugeot",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "DQE2H66",
+            "modelo": "Fiat Uno",
+            "ano": "2021",
+            "marca": "Fiat",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "PLR3D97",
+            "modelo": "BMW i8",
+            "ano": "2021",
+            "marca": "BMW",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "OTM2X22",
+            "modelo": "Tesla Model Y",
+            "ano": "2023",
+            "marca": "Tesla",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "BEE4R22",
+            "modelo": "Jeep Renegade",
+            "ano": "2022",
+            "marca": "Jeep",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "NJK5G87",
+            "modelo": "Toyota Corolla XEi",
+            "ano": "2015",
+            "marca": "Toyota",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "IGV6A04",
+            "modelo": "Hyundai Ioniq",
+            "ano": "2020",
+            "marca": "Hyundai",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "HLM3P65",
+            "modelo": "Golf",
+            "ano": "2008",
+            "marca": "volkswagen",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "CRD2H12",
+            "modelo": "nissan versa",
+            "ano": "2023",
+            "marca": "nissan",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        },
+        {
+            "placa": "LPG7F98",
+            "modelo": "saveiro",
+            "ano": "2014",
+            "marca": "volkswagen",
+            "status": 200,
+            "ok": true,
+            "statusText": "ok"
+        }
+    ]
+}

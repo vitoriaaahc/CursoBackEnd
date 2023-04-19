@@ -1,0 +1,11 @@
+{
+    "cep":{
+        "code":"88075-121",
+        "state":"SC",
+        "city":"Florianópolis",
+        "district":"Estreito",
+        "address":"Rua Manoel de Oliveira Ramos - de 141/142 ao fim",
+        "status":200,
+        "ok":true,
+        "statusText":"ok"}
+    }

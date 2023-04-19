@@ -1,0 +1,12 @@
+{
+    "cep":{
+        "code":"88107-550",
+        "state":"SC",
+        "city":"São José",
+        "district":"Forquilhas",
+        "address":"Rua Joaquim José Meurer",
+        "status":200,
+        "ok":true,
+        "statusText":"ok"
+    }
+}
